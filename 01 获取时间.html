@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+
+        document.write("<h1>第一个程序</h1>");
+        //改变日期
+        function getDate() {
+            //document.getElementById("time").innerHTML=Date();
+
+        }
+        //改变内容
+        function change() {
+
+            liters = document.getElementById("liters");
+            liters.innerHTML = "this isn't a liters"
+        }
+        //改变图片
+        function changeImage() {
+            img = document.getElementById('images');
+            if (img.src.match("http://www.runoob.com/images/pic_bulboff.gif")){
+                img.src = "http://www.runoob.com/images/pic_bulbon.gif";
+            }else{
+                img.src = "http://www.runoob.com/images/pic_bulboff.gif";
+            }
+
+        }
+    </script>
+</head>
+<body>
+<p id="time">这是一段时间</p>
+
+<p id="liters">
+    this is liters
+</p>
+
+<button type="button" onclick="getDate()">
+    get
+</button>
+
+<button onclick="alert('欢迎')">
+    欢迎
+</button>
+
+<button onclick="change()">
+    change
+</button>
+<img src="http://www.runoob.com/images/pic_bulboff.gif" id="images" width="100px" height="100px">
+</body>
+
+</html>
