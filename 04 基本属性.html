@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--js输出-->
+<p id="demo" onclick="operation()">hello world</p>
+<script>
+    // function myFunction() {
+    //     document.write(Date())
+    // }
+
+//    字面量：整数和小数，或者科学计数
+    function count() {
+       alert(1.23e5)
+    }
+//    字符串字面量可以使用单引号或双引号
+    function string() {
+        alert("hello");
+        alert('world');
+    }
+
+//    用于乘法
+    function multiply() {
+        document.getElementById("demo").innerHTML=5*10
+    }
+//    数组字面量   [10,20,40]
+//    对象字面量   {firstName:"houshuai",age:"20" }
+//    函数字面量  function 函数名(a,b){return a*b}
+
+    function varible() {
+        var length=8;
+        document.getElementById("demo").innerHTML=length;
+    }
+    
+//    运算操作符
+    function operation() {
+        //document.getElementById("demo").innerHTML=(5*6)*10;
+        num1=2;
+        num2=3;
+        document.getElementById("demo").innerHTML=num1+num2
+
+    }
+</script>
+</body>
+</html>
