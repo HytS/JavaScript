@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <p id="test">
+        hello
+    </p>
+
+    <button id="demo" onclick="cars()">
+        change
+    </button>
+
+    <script>
+        function test() {
+            var varible;
+            //typeof(varible)
+            document.getElementById("test").innerHTML=varible
+
+            alert(typeof (varible))
+        }
+        function reinterface() {
+            var varible = "hello";
+            //更改变量之后，数据类型也会改变
+            varible = 11
+            alert(typeof (varible))
+        }
+    //    值类型（基本类型）数字，布尔，未定义，空，字符串，symbol
+        // Symbol 是 ES6 引入了一种新的原始数据类型，表示独一无二的值。
+    //    引用类型（数组，对象，函数）
+        //JavaScript 只有一种数字类型。数字可以带小数点，也可以不带：
+        function Type() {
+            var num1=34.0;
+            var num2=34;
+            alert(num1);
+            alert(num2);
+
+        }
+
+        //数组
+        function cars() {
+            var fomales=new array();
+            fomales[0]="mayuting";
+            fomales[1]="haoyumeng";
+            alert(fomales)
+        }
+    </script>
+</body>
+</html>
