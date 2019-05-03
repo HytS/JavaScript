@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--传入参数 只能是单引号-->
+<p id="demo" onclick="fuck('houshuai','mayuting')">
+    what
+</p>
+<p id="what" onclick="haveReturn(4,9)">
+    what
+</p>
+<script>
+    function fuck(man,woman) {
+        alert(man+"fuck"+woman)
+    }
+    
+//    带有返回值的函数
+    function haveReturn(a,b) {
+
+        return a*b;
+
+    }
+    document.getElementById("what").innerHTML=haveReturn(4,4);
+</script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<p id="demo" onclick="myFunction()">what</p>
+<p id="demo1" onclick="myVarible()">what</p>
+
+<script>
+    <!--1 -->
+    myFunction();
+    //局部变量在声明的函数外无法访问  变量在函数内声明为局部变量
+    document.getElementById("demo").innerHTML = "typeof :" + typeof carName;
+        function myFunction() {
+            //局部变量只能在函数内访问
+            var carName = "BMW";
+            document.getElementById("demo").innerHTML = "typeof :" + typeof carName;
+        }
+//      2
+//   声明全局变量  函数外声明为全局变量
+    var varible = "volve";
+        document.getElementById("demo1").innerHTML = "函数外" + varible;
+    function myVarible() {
+        document.getElementById("demo1").innerHTML = "函数内" + varible
+    }
+
+
+</script>
+</body>
+</html>
