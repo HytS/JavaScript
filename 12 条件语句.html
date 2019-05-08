@@ -9,7 +9,15 @@
     <button onclick="get()">
         getHour();
     </button>
+
+    <button onclick="useSwitch()">
+        getDay();
+    </button>
+    <button onclick="traverseArray()">
+        traverseArray();
+    </button>
     <script>
+
         function get() {
             //创建一个对象 字符串、数字、数组、日期、函数
             var time = new Date().getHours();
@@ -23,8 +31,51 @@
         }
         
         
-        function () {
-            
+         function getPlusIfElse() {
+            var time = new Date().getHours();
+            if (time<10){
+                document.write("上午好")
+            }else if (time<20){
+                document.write("中午好")
+            } else {
+                document.write("晚上好 ")
+            }
+         }
+
+    //     优化 if-else
+        //???
+        const condition = 2;
+        let obj = {
+            '1' : () => {document.write("1")},
+            '2' : () => {document.write("2")},
+            '3' : () => {document.write("3")}
+        };
+        //???
+        obj[condition]();
+
+        
+    //    switch
+        function useSwitch() {
+            var  dateTime = new Date().getDay();
+            switch (dateTime) {
+                case 0 : document.write("sunday");break;
+                case 1 : document.write("sunday");break;
+                case 2 : document.write("sunday");break;
+                case 3 : document.write("wenday");break;
+                case 4 : document.write("thusday");break;
+                case 5 : document.write("friday");break;
+                case 6 : document.write("saturday");break;
+            }
+        }
+        
+        function traverseArray() {
+            var arr = ["H","O","U"];
+            for (var i = 0 ; i < arr.length ; i++){
+                document.write(arr[i]);//为什么打印出数组中的东西会有undefine
+
+               // document.write(i);
+            }
+           // document.write(arr[3])
         }
     </script>
 </body>
