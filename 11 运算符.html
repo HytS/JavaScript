@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p id="demo"></p>
+<button onclick="add()">
+    add
+</button>
+<button onclick="addPlus()">
+    addPlus
+</button>
+<button onclick="plusAdd()">
+    plusAdd
+</button>
+
+<button onclick="removePlus()">
+    removePlus
+</button>
+
+<button onclick="plusRemove()">
+    plusRemove
+</button>
+
+<button onclick="numberAndString()">
+    numberAndString
+</button>
+
+
+<button onclick="threeEquality()">
+    threeEquality
+</button>
+
+<button onclick="threeEqualityTest()">
+    threeEqualityTest
+</button>
+
+<input type="text" id="age">
+<button onclick="testAge()">
+    判断
+</button>
+
+    <script>
+
+        function add() {
+
+            var num1 = 5;
+            var num2 = 6;
+
+            document.getElementById("demo").innerHTML = num1 + num2;
+        }
+        function addPlus() {
+        //    x 先赋值 再+1
+        //    x=6 y=5
+            var x=5;
+            y = x++;
+            document.getElementById("demo").innerHTML ="x=" + x + "y=" + y;
+        }
+        function plusAdd() {
+            //x先+1给y，再赋值
+            //x=6 y=6
+            var x=5;
+            y = ++x;
+            document.getElementById("demo").innerHTML ="x=" + x + "y=" + y;
+        }
+
+        function removePlus() {
+
+            //x=4 y=5
+            //x先赋值给y，再-1
+            var x=5;
+            y = x--;
+            document.getElementById("demo").innerHTML ="x=" + x + "y=" + y;
+        }
+        function plusRemove() {
+
+            //x=4 y=4
+            var x=5;
+            y = --x;
+            document.getElementById("demo").innerHTML ="x=" + x + "y=" + y;
+        }
+    //    两个数字相加，返回数字相加的和，如果数字与字符串相加，返回字符串，如下实例：
+        function numberAndString() {
+
+            var sting = 'houshuai';
+            var number = 666;
+            document.getElementById("demo").innerHTML = sting + number;
+        }
+
+        <!--  算术运算符 + - * / % ++ --  -->
+        //赋值运算符  -= +=
+        //比较运算符
+        /*
+           === 绝对等于 值和类型均相当
+           !==  不绝对等于（值和类型有一个不相等，或两个都不相等）
+                    */
+
+        function threeEquality() {
+            var x=5;
+            document.getElementById("demo").innerHTML = x === 5;
+        }
+
+        function threeEqualityTest() {
+            var x=5;
+            document.getElementById("demo").innerHTML = x === "5";
+
+        }
+        //逻辑运算符
+        /*
+            * &&	and	(x < 10 && y > 1) 为 true
+              ||	or	(x==5 || y==5) 为 false
+               !	not	!(x==y) 为 true
+        * */
+
+
+
+        /*
+        测试年龄
+        * */
+
+        //= 赋值
+        function testAge() {
+            var age,panduan;
+            age = document.getElementById("age").value;
+//          error    document.getElementById("age").value = age ;  从右向左
+            panduan = (age<18)?"符合":"不符合";
+            document.getElementById("demo").innerHTML = panduan;
+
+
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <button onclick="get()">
+        getHour();
+    </button>
+    <script>
+        function get() {
+            //创建一个对象 字符串、数字、数组、日期、函数
+            var time = new Date().getHours();
+            var x ;
+            if (time < 20){
+                x = "today yes";
+
+            }
+            document.getElementById("demo").innerHTML = x;
+
+        }
+        
+        
+        function () {
+            
+        }
+    </script>
+</body>
+</html>
