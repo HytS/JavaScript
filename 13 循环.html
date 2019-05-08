@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p id="demo"></p>
+<button onclick="forCirculation()">
+    traverse
+</button>
+
+<button onclick="forinCirculation()">
+    forin
+</button>
+<script>
+    /*
+
+        for - 循环代码块一定的次数
+        for/in - 循环遍历对象的属性
+        while - 当指定的条件为 true 时循环指定的代码块
+        do/while - 同样当指定的条件为 true 时循环指定的代码块
+
+*/
+    function forCirculation() {
+        for (var i = 0 ; i<5 ; i++){
+            document.write(i);
+        }
+    }
+
+    function forinCirculation() {
+        var x;
+        var txt ="";
+        //数组
+        var person = ["BMW","audi"];
+
+        //对象
+        var persons ={ name:"mayu",age:18};
+        for (x in persons){
+
+            txt += persons[x];
+        }
+
+        document.getElementById("demo").innerHTML = txt;
+    }
+</script>
+</body>
+</html>
