@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<p id="demo"></p>
+
+<button onclick="add()">
+    add
+</button>
+
+<button onclick="circulation()">
+    circulation
+</button>
+
+<button onclick="testBreak()">
+    testBreak
+</button>
+
+<button onclick="testcontinue()">
+    testcontinue
+</button>
+
+<button onclick="testLabel()">
+    testLabel
+</button>
+<script>
+    function add() {
+        var x="";
+        var i=0;
+        while (i<5){
+            x += i;
+            i++;
+        }
+        document.getElementById("demo").innerHTML = x;
+    }
+
+//    do-while
+    function circulation() {
+        var x = "";
+        var i=0;
+        do {
+
+            x += i;
+            console.log(x);
+            i++;
+        }while (i<5);
+
+        document.getElementById("demo").innerHTML = x;
+    }
+
+//    break
+    function testBreak() {
+        var x="";
+        var i=0;
+        for (;i<5;i++){
+            if (i == 3){
+                break;
+            }
+            x += i;
+        }
+        document.getElementById("demo").innerHTML = x;
+    }
+
+//    continue
+    function testcontinue() {
+        var x="";
+        var i=0;
+        for (;i<5;i++){
+            //出现条件则会跳过该条件，继续执行
+            if (i == 3){
+                continue;
+            }
+            x += i;
+        }
+        document.getElementById("demo").innerHTML = x;
+    }
+
+    //标签
+    function testLabel() {
+
+        var persons = ["1","23","456","78910"];
+
+        list:{
+            document.write(persons[0]);
+            document.write(persons[1]);
+            //break 跳出代码块  continue 进入下一个迭代（只能用于循环的代码块）
+            break list ;
+            document.write(persons[2])
+        }
+
+        // var i = 0;
+        // for (;i<5;i++){
+        //
+        //     continue persons;
+        //
+        // }
+    }
+
+
+    outerloop:
+        for (var i = 0; i < 10; i++)
+        {
+            innerloop:
+                for (var j = 0; j < 10; j++)
+                {
+                    if (j > 3)
+                    {
+                        break;
+                    }
+                    if (i == 2)
+                    {
+                        break innerloop;
+                    }
+                    if (i == 4)
+                    {
+                        break outerloop;
+                    }
+                    document.write("i=" + i + " j=" + j + "<br/>");
+                }
+        }
+</script>
+</body>
+</html>

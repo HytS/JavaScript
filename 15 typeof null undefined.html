@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <!--typeof 返回变量或表达式的类型-->
+<p id="demo"></p>
+    <script>
+        // document.getElementById("demo").innerHTML = typeof "string" + "<br/>" +
+        //     typeof 123 + "<br/>" + typeof ["arr1","arr2"] + "<br/>" +typeof true + "<br/>"
+        //     + typeof [1,1,1] + "<br/>" + typeof {name:"mauy",age:800} + "<br/>" ;
+    //    [1,1,1]    [hnsj,sjj,sjj]  ??
+
+        var persons = { name: "mayuting",lastName: "saohuo",nickname :"saob"};
+         //对象可以设置为 undefined 来清空。 对象可以设置为 null 来清空。
+         document.getElementById("demo").innerHTML = persons.lastName;
+
+    //     变量如果没有被定义则类型是undefined
+        var varible ;
+        document.getElementById("demo").innerHTML = varible + typeof varible ;
+
+//          null undefined 值相同 类型不相同
+        document.getElementById("demo").innerHTML =  typeof undefined +typeof null + (null == undefined)
+            + (null === undefined)
+
+
+
+        /*
+        *     （1）undefined：是所有没有赋值变量的默认值，自动赋值。
+              （2）null：主动释放一个变量引用的对象，表示一个变量不再指向任何对象地址。
+        *
+            *   2、何时使用null?
+
+                当使用完一个比较大的对象时，需要对其进行释放内存时，设置为 null。
+
+                3、null 与 undefined 的异同点是什么呢？
+
+                共同点：都是原始类型，保存在栈中变量本地。
+
+                不同点：
+
+                （1）undefined——表示变量声明过但并未赋过值。
+
+                它是所有未赋值变量默认值，例如：
+
+                var a;    // a 自动被赋值为 undefined
+                （2）null——表示一个变量将来可能指向一个对象。
+
+                一般用于主动释放指向对象的引用，例如：
+
+                var emps = ['ss','nn'];
+                emps = null;     // 释放指向数组的引用
+                4、延伸——垃圾回收站
+
+                它是专门释放对象内存的一个程序。
+
+                 （1）在底层，后台伴随当前程序同时运行；引擎会定时自动调用垃圾回收期；
+                 （2）总有一个对象不再被任何变量引用时，才释放。
+
+        * */
+    </script>
+</body>
+</html>
