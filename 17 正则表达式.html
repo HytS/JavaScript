@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p id="demo"></p>
+<p id="demo1">
+    hello world
+</p>
+<button onclick="searchStr()">
+    search
+</button>
+
+<button onclick="searchFunction()">
+    searchFunction
+</button>
+
+<button onclick="replaceStr()">
+    replace
+</button>
+
+<button onclick="replaceFunction()">
+    replaceFunction
+</button>
+
+<script>
+    /*
+    * w3cschool  是一个模式 (用于检索)。
+    i  是一个修饰符 (搜索不区分大小写)。
+    * */
+   // var patt = /w3cschol/i;
+
+    function searchStr() {
+        var str = "hello MYT";
+        var nn = str.search(/myt/i);
+        document.getElementById("demo").innerHTML = nn;
+    }
+    
+    function searchFunction() {
+        var str = "hello MYT";
+        var  nn = str.search("o");
+
+        document.getElementById("demo").innerHTML = nn;
+    }
+
+    function replaceStr() {
+        //????
+        var str = document.getElementById("demo1").innerHTML;
+        var text = str.replace(/world/i,"MYT");
+
+        document.getElementById("demo1").innerHTML = text;
+    }
+
+    function replaceFunction() {
+
+    //    replace() 方法将接收字符串作为参数：
+        var str = document.getElementById("demo1").innerHTML;
+        //var text1 = str.replace("world","MYT");
+
+        document.getElementById("demo1").innerHTML = str.replace("world","MYT");
+    }
+</script>
+</body>
+</html>
