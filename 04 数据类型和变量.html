@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--js输出-->
+
+<p id="demo" onclick="TwoNumbers(2,3)">hello world</p>
+
+<button onclick="countNaN()">countNaN</button>
+
+<button onclick="comPareF()">comPareF</button>
+
+<button onclick="arrFunction()">arrFunction</button>
+
+<button onclick="Obj()">obj</button>
+
+<script>
+    // function myFunction() {
+    //     document.write(Date())
+    // }
+/*
+* javaScript不区分整数和浮点数， 统一用Number表示
+* NaN表示Not a Number 当无法显示计算结果时用NaN
+* Infinity表示无限大，当数值超过了javascript的Number所能表示的最大值，就表示为infinity
+*
+* */
+
+    function countNaN() {
+        alert(2/0);
+        alert(0/0);
+    }
+
+//    字面量：整数和小数，或者科学计数
+    function count() {
+       alert(1.23e5)
+    }
+//    字符串字面量可以使用单引号或双引号
+    function string() {
+        alert("hello");
+        alert('world');
+    }
+
+    /*
+    * 比较运算符
+    * JavaScript允许对任意数据类型做比较
+    * 1、==  自动转换数据类型再比较
+    * 2、===  不会自动转换数据类型，如果数据类型不一致，返回false，如果一致，再比较。
+    * 因为JavaScript这个设计缺陷，不使用 == 比较，始终坚持使用 === 比较
+    *
+    * NaN === NaN
+    * NaN这个特殊Number与其他值都不相等，包括自己
+    *
+    * 浮点数比较，因为计算机无法精确到表示无限循环小数，要比较两个浮点数是否相等，
+    * 只能计算他们之差到绝对值，看是否小于某个阈值
+    *
+    * */
+
+    function comPareF() {
+        alert(1/3 === (1 - 2 / 3));
+
+        alert(Math.abs(1/3 -(1 - 2 / 3))<0.00000001)
+    }
+
+    /*
+    * null undefined
+    * null 空
+    * undefined 未定义
+    * undefined 仅仅在判断函数参数是否传递到情况下有用
+    * */
+
+    /*
+    * 数组是一组按顺序排列的集合
+    * 创建数组通过Array()函数实现  new Array(1,2,3)
+    *
+    * */
+    function arrFunction() {
+        var arr = [1,2,3.14,'hello',true];
+        alert(arr[0]);
+        alert(arr[5]);
+        alert(arr[7]);
+    }
+
+    /*
+    * 对象
+    * JavaScript的对象是一组由键-值组成的无序集合
+    * JavaScript对象的键都是字符串类型，值可以是任意数据类型。
+    * 键又称为对象的属性
+    * * */
+
+    function Obj() {
+        var person = {
+            name:'Bob',
+            age:20,
+            tags:['js','web','mobile']
+        };
+        alert(person.name);
+
+    }
+
+
+//    用于乘法
+    function multiply() {
+        document.getElementById("demo").innerHTML=5*10
+    }
+
+//    对象字面量   {firstName:"houshuai",age:"20" }
+//    函数字面量  function 函数名(a,b){return a*b}
+
+    function varible() {
+        var length = 8;
+        document.getElementById("demo").innerHTML = length;
+    }
+    
+//    运算操作符
+    function operation() {
+        //document.getElementById("demo").innerHTML=(5*6)*10;
+        num1=2;
+        num2=3;
+        document.getElementById("demo").innerHTML=num1+num2
+
+    }
+
+    function datas() {
+        alert(16+"volve");
+    }
+
+
+//    大小写敏感
+</script>
+</body>
+</html>
