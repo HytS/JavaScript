@@ -10,23 +10,36 @@
 </p>
 <script>
     /*
-
-    声明对象
+    * 对象是一种无序的集合数据类型
+    * 声明对象
     * var person= new Object;
-    *var person={firstname:"John", lastname:"Doe", id:5566};
+    * var person={ firstname :"John", lastname:"Doe", id:5566};
     * */
     var person = {
         firstName:"jackMa",
         lastName:"hou",
         age:20,
-        fullName:function () {
+
+        'school' : "firstSchool",
+        fullName : function () {
             return person.firstName+""+person.lastName;
         }
-    }
+    };
+
+    //console.log(person.firstName);
+    //如果属性名包含特殊字符，就要用''包含起来
+    //并且访问需要用person[]
+    /*
+    * 对象的属性都是字符串，但是属性的值可以是任意的数据类型
+    * 访问不存在的属性，返回undefined
+    * */
+    console.log(person['school']);
 
     function change() {
+
         // document.getElementById("demo").innerHTML=person.firstName+"现在"+person.age+"岁";
         // document.getElementById("demo").innerHTML=person["firstName"]+"现在"+person["age"]+"岁";
+
         document.getElementById("demo").innerHTML=person.fullName();
         document.getElementById("demo").innerHTML=person.fullName;//访问person对象的fullName属性
 
