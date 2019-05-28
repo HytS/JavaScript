@@ -34,6 +34,40 @@
     * */
     console.log(person['school']);
 
+    /*
+    * js对象是动态类型，可以自由的给对象添加和删除属性
+    *
+    * */
+    var people = {
+        name : 'MYT'
+    };
+    // alert(people.age);
+    // people.age = 18;
+    //
+    // alert(people.age);
+    // //删除属性
+    // delete people.age;
+    // delete people.name;
+    // console.log(people.name);
+    // //删除掉一个不存在的属性也不会报错
+    // delete people.school;
+
+    /*
+      in 可以检查对象是否拥有某一属性
+      如果in判断一个属性存在，可能不属于people，可能是people继承得到的
+      判断属性存在，要用''
+
+      因为toString定义在object对象中，而所有对象最终都会在原型链上指向object，所以people也拥有toString属性。
+      要判断一个属性是否是people自身拥有的，而不是继承得到的，可以用hasOwnProperty()方法：
+    * */
+
+    console.log('name' in people);
+    console.log('toString' in people);
+
+    console.log(people.hasOwnProperty('name'));
+    console.log(people.hasOwnProperty('toString'));
+
+
     function change() {
 
         // document.getElementById("demo").innerHTML=person.firstName+"现在"+person.age+"岁";
