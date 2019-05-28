@@ -15,12 +15,11 @@
 
 <button onclick="arrFunction()">arrFunction</button>
 
+<button onclick="createArr()">createArr</button>
+
 <button onclick="Obj()">obj</button>
 
 <script>
-    // function myFunction() {
-    //     document.write(Date())
-    // }
 /*
 * javaScript不区分整数和浮点数， 统一用Number表示
 * NaN表示Not a Number 当无法显示计算结果时用NaN
@@ -37,7 +36,10 @@
     function count() {
        alert(1.23e5)
     }
-//    字符串字面量可以使用单引号或双引号
+
+    /*
+    * 字符串  ' "" 本身只是字符串的一种表现形式，不属于字符串的内容
+    * */
     function string() {
         alert("hello");
         alert('world');
@@ -66,6 +68,7 @@
 
     /*
     * null undefined
+    * 大多数情况下用null
     * null 空
     * undefined 未定义
     * undefined 仅仅在判断函数参数是否传递到情况下有用
@@ -74,8 +77,13 @@
     /*
     * 数组是一组按顺序排列的集合
     * 创建数组通过Array()函数实现  new Array(1,2,3)
-    *
     * */
+    function createArr() {
+        var arr = new Array('houw','shuai');
+
+        alert(arr);
+    }
+
     function arrFunction() {
         var arr = [1,2,3.14,'hello',true];
         alert(arr[0]);
