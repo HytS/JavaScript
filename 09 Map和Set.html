@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    'use strict'
+    /*
+    * js里的默认对象表达方式{}可以看做其他语言中的Dictionary结构，即一组键值对
+    * 但是键必须是字符串
+    * Map
+    * */
+    var m = new Map();
+    console.log("hello world")
+
+    /*
+    * Map是一组键值对结构，类似字典
+    *
+    * */
+    var score = new Map([[`MT`,99],[`HYM`,88]])
+
+    console.log(m);
+
+    m.get(`MT`);//查找数据，比起数组挨个排查，效率要高很多
+
+    var M = new Map();
+    M.set(`Asia`,22);//添加键值对
+    M.set(`Oecan`,32);
+
+    M.has(`Asia`) //是否存在key（Asia）
+    M.delete(`oecan`)//删除key
+    M.get(`oecan`)//undefined
+
+//    一个key只能对应一个值，所以，多次对一个key放入value，后面的值会把前面的值冲掉
+    M.set(`One`,11)
+    M.set(`One`,22)
+    alert(M.get(`One`))//22
+
+    /*
+    * Set 是一组key的集合，但不存储value。由于key不能重复
+    * 创建一个Set 需要提供一个Array作为输出，或者直接创建一个空Set
+    * */
+</script>
+</body>
+</html>
