@@ -18,9 +18,41 @@
         var i,x;
         for ( i=0;; i < arr.length; i++) {
             x = arr[i];
-            alert(x);
-            
+            alert(x); 
         }
+
+        var o = {
+            name:'hou',
+            age:18
+        }
+
+        for (var key in o) {
+
+            if (o.hasOwnProvar(key))
+                console.log(key)
+            }
+        }
+
+        var arr = ['a','b','c'];
+
+        for (var i in arr) {
+            console.log(i);
+            console.log(arr[i]);
+        }
+
+        // while
+        var x =0;
+        var n =99;
+        while n>0{
+            x += n;
+            n -= 2;
+        }
+        // do while 循环体至少执行一次 
+        var Dn = 0;
+        do {
+            Dn += 1;
+        } while (DN < 100);
+    
     </script>
 </body>
 </html>
